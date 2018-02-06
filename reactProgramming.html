@@ -19,13 +19,17 @@
 
  
 
- SayHello.propTypes = {
+ const PropTypes = {
     firstName(props, propName, componentName) {
         if (typeof props[propName] !== 'string') {
             return new Error(`you should pass a string for ${propName} in ${componentName}, but you passed a ${typeof props[propName]}`);
         }
     }
 }	
+SayHello.propTypes ={
+	firstName: PropTypes.string,
+	lastName: PropTypes.string,
+}
 
 
  	ReactDOM.render(
