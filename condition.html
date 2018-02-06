@@ -10,6 +10,10 @@
 	<div id="root"></div>
 	<script type="text/babel">
 	function Message({message}){
+	if(!message){
+	return <div>no message</div>
+	
+}
 	return(
      <div>{message}</div>
 	)
