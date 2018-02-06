@@ -11,20 +11,10 @@
 	<script type="text/babel">
 	function Message({message}){
     return(
-    <div>
-    	{ message
-    ? React.createElement(
-    'div', 
-    null,
-     message,
-     )
-    : React.createElement(
-    'div',
-     null, 
-     'no message',
-     )
-		}
-	</div>
+    <div>{
+    	?(<div>message</div>)
+    	:(<div>'no message'</div>)
+	}</div>
 		)}	
 
 
