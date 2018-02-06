@@ -6,12 +6,23 @@
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 </head>
+<style type="text/css">
+	.box-name{
+		width: 40px;
+		height: 40px;
+		border: 1px solid black;
+	}
+</style>
 <body>
 	<div id="root"></div>
 	<script type="text/babel">
+		const props ={
+		className: "box-name",
+		style: {paddingLeft:20},
+	}
 		const element = (
       <div>
-      	<div style={{paddingLeft: '50px'}}> box </div>
+      	<div {...props}> box </div>
       </div>
 		)
 		ReactDOM.render(element,document.getElementById('root'))
