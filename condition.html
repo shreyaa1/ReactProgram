@@ -10,11 +10,22 @@
 	<div id="root"></div>
 	<script type="text/babel">
 	function Message({message}){
-    return message
-    ? React.createElement('div', null, message)
-    : React.createElement('div', null, 'no message',)
-
-}	
+    return(
+    <div>
+    	{ message
+    ? React.createElement(
+    'div', 
+    null,
+     message,
+     )
+    : React.createElement(
+    'div',
+     null, 
+     'no message',
+     )
+		}
+	</div>
+		)}	
 
 
 ReactDOM.render(
