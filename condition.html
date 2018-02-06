@@ -11,15 +11,15 @@
 	<script type="text/babel">
 	function Message({message}){
 	if(!message){
-	return <div>no message</div>
+	return  React.createElement('div', null, 'no message')
 	
 }
 	return(
-     <div>{message}</div>
+    React.createElement('div', null, message)
 	)
 }
 ReactDOM.render(
-<Message message = {null}/>,document.getElementById('root'),)
+<Message message = "hii there"/>,document.getElementById('root'),)
 </script>
 
 </body>
