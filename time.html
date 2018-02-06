@@ -12,8 +12,15 @@
 		function tick(){
 		const rootElement = document.getElementById("root")
 		const time = new Date().toLocaleTimeString()
-		const element = <div><input value = {time}/></div>
-		ReactDOM.render(element,rootElement)
+		const element = 
+		`<div>
+			<input value = '${time}'/>
+			<div>
+			<input value = '${time}'/>
+		</div>
+		</div>`
+
+		rootElement.innerHTML = element
 	}
 	tick()
 	setInterval(tick, 1000)
