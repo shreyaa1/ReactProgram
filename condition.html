@@ -10,16 +10,15 @@
 	<div id="root"></div>
 	<script type="text/babel">
 	function Message({message}){
-	if(!message){
-	return  React.createElement('div', null, 'no message')
-	
-}
-	return(
-    React.createElement('div', null, message)
-	)
-}
+    return message
+    ? React.createElement('div', null, message)
+    : React.createElement('div', null, 'no message',)
+
+}	
+
+
 ReactDOM.render(
-<Message message = {null}/>,document.getElementById('root'),)
+<Message message = "hi u are there"/>,document.getElementById('root'),)
 </script>
 
 </body>
