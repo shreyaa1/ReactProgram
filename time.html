@@ -12,7 +12,7 @@
 		function tick(){
 		const rootElement = document.getElementById("root")
 		const time = new Date().toLocaleTimeString()
-		const element = <div>{time}</div>
+		const element = <div><input value = {time}/></div>
 		ReactDOM.render(element,rootElement)
 	}
 	tick()
