@@ -17,13 +17,15 @@
 					<p>
 						<button onClick = {() => setState({ eventCount:state.eventCount + 1, })}>click me</button>
 					</p>
+					<p>type your name->{state.userName}</p>
 					<p>
-						<input/>
+						 <input onChange={event => setState({userName: event.target.value})}/>
 					</p>
 				</div>
 			)
 		}
         setState({eventCount: 5});
+        setState({userName:'george'})
 
         function setState(newState) {
         	console.log(newState)
