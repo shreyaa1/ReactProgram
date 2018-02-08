@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>React component</title>
+	<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+	<div id="root"></div>
+<style type="text/css">
+	.imgStyle{
+		height: auto;
+		width: 100px;
+	}
+	.boxWrapper{
+		width: 100px;
+		border: 1px solid;
+        padding: 10px;
+	}
+</style>
+      <script type="text/babel">
+		class WrapperComponent extends React.Component{
+			render() {
+              return (
+              <div className = "boxWrapper">
+                <Image ref = "Image"/>
+              	<Story ref = "Story"/>
+              </div>
+              );
+               }
+           }
+				
+				class Image extends React.Component{
+					render(){
+					 return(
+					    <div>
+						   <img  className ="imgStyle" src="https://static.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg"/  >
+					   </div>
+					);
+				  }
+				}
+					class Story extends React.Component{
+					  render(){
+					   return(
+					     <div>
+						  <h1>Story</h1>
+						  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+					   </div>
+					);
+				}
+				}
+
+
+            ReactDOM.render(
+			<WrapperComponent/>,document.getElementById('root'));
+      </script>
+
+</body>
+</html>

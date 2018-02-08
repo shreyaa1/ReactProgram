@@ -13,11 +13,11 @@
 		function App() {
 			return(
 				<div>
-					<p>some thing{state.eventCount}</p>
+					<p>some thing <br/>s{state.eventCount}</p>
 					<p>
 						<button onClick = {() => setState({ eventCount:state.eventCount + 1, })}>click me</button>
 					</p>
-					<p>type your name->{state.userName}</p>
+					<p>type your name<br/>{state.userName}</p>
 					<p>
 						 <input onChange={event => setState({userName: event.target.value})}/>
 					</p>
